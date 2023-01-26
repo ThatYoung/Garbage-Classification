@@ -21,12 +21,6 @@ html_temp = '''
     <h2></h2>
     <center><h3>Please upload garbage image to find its Category</h3></center>
     </div>
-    <div>
-        <video width="320" height="240" controls>
-            <source src="Demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
-    </div>
     '''
 st.set_option('deprecation.showfileUploaderEncoding', False)
 st.markdown(html_temp, unsafe_allow_html=True)
@@ -64,12 +58,13 @@ except Exception as e:
   #st.info(e)
   pass
 
-
 html_temp = '''
     <div>
-        <video width="320" height="240" controls>
-            <source src="Demo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-        </video>
+    <h2></h2>
+    <center><h3>Video Demo:</h3></center>
     </div>
     '''
+video_file = open('Demo.mp4', 'rb')
+video_bytes = video_file.read()
+
+st.video(video_bytes)
