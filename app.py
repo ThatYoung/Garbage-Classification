@@ -11,15 +11,20 @@ html_temp = '''
     <div style =  padding-bottom: 20px; padding-top: 20px; padding-left: 5px; padding-right: 5px">
     <center><h1>Garbage Classification</h1></center>
     <center><h4>by candidate: Leon Yang</h4></center>
-    
+    <center><h3>Video Demo:</h3></center>
     </div>
     '''
+video_file = open('Demo.mp4', 'rb')
+video_bytes = video_file.read()
+
+st.video(video_bytes)
 
 st.markdown(html_temp, unsafe_allow_html=True)
 html_temp = '''
     <div>
     <h2></h2>
-    <center><h3>Please upload garbage image to find its Category</h3></center>
+    <center><h3>Try yourself: </h3></center>
+    <center><h4>Please upload garbage image to find its Category</h4></center>
     </div>
     '''
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -58,14 +63,3 @@ except Exception as e:
   #st.info(e)
   pass
 
-st.markdown(html_temp, unsafe_allow_html=True)
-html_temp = '''
-    <div>
-    <h2></h2>
-    <center><h3>Video Demo:</h3></center>
-    </div>
-    '''
-video_file = open('Demo.mp4', 'rb')
-video_bytes = video_file.read()
-
-st.video(video_bytes)
