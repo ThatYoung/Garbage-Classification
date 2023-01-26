@@ -10,6 +10,7 @@ labels = gen_labels()
 html_temp = '''
     <div style =  padding-bottom: 20px; padding-top: 20px; padding-left: 5px; padding-right: 5px">
     <center><h1>Garbage Classification</h1></center>
+    <center><h3>by candidate: Leon Yang</h3></center>
     
     </div>
     '''
