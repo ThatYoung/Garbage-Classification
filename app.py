@@ -58,6 +58,7 @@ except Exception as e:
   #st.info(e)
   pass
 
+st.markdown(html_temp, unsafe_allow_html=True)
 html_temp = '''
     <div>
     <h2></h2>

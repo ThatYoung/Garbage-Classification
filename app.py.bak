@@ -61,7 +61,7 @@ except Exception as e:
 html_temp = '''
     <div>
     <h2></h2>
-    <center><h3>Video Demo</h3></center>
+    <center><h3>Video Demo:</h3></center>
     </div>
     '''
 video_file = open('Demo.mp4', 'rb')
