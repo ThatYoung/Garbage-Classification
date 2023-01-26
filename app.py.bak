@@ -63,14 +63,3 @@ except Exception as e:
   #st.info(e)
   pass
 
-st.markdown(html_temp, unsafe_allow_html=True)
-html_temp = '''
-    <div>
-    <h2></h2>
-    <center><h3>Video Demo:</h3></center>
-    </div>
-    '''
-video_file = open('Demo.mp4', 'rb')
-video_bytes = video_file.read()
-
-st.video(video_bytes)
