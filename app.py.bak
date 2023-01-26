@@ -14,6 +14,7 @@ html_temp = '''
     <center><h3>Video Demo:</h3></center>
     </div>
     '''
+st.markdown(html_temp, unsafe_allow_html=True)
 video_file = open('Demo.mp4', 'rb')
 video_bytes = video_file.read()
 
