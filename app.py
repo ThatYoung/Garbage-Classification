@@ -18,7 +18,7 @@ st.markdown(html_temp, unsafe_allow_html=True)
 html_temp = '''
     <div>
     <h2></h2>
-    <center><h3>Please upload Waste Image to find its Category</h3></center>
+    <center><h3>Please upload garbage image to find its Category</h3></center>
     </div>
     '''
 st.set_option('deprecation.showfileUploaderEncoding', False)
@@ -54,5 +54,5 @@ try:
         prediction = model.predict(img[np.newaxis, ...])
         st.info('The image has been classified as " {} waste " '.format(labels[np.argmax(prediction[0], axis=-1)]))
 except Exception as e:
-  st.info(e)
+  #st.info(e)
   pass
